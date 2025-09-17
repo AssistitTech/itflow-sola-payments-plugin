@@ -1,0 +1,10 @@
+--- client/saved_payment_methods.php
++++ client/saved_payment_methods.php
+@@ ... @@
+- // Stripe logic
++ // Sola Payments logic
++ if ($provider['payment_provider_name'] == "Sola Payments") {
++   require_once $rootPath . '/plugins/sola_payments/sola_payments_api.php';
++   // ...call Sola Payments API for saved methods...
++   exit();
++ }

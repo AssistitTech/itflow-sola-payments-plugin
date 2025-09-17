@@ -1,0 +1,17 @@
+--- admin/modals/payment_provider/payment_provider_add.php
++++ admin/modals/payment_provider/payment_provider_add.php
+@@ ... @@
+- <option>Stripe</option>
++ <option>Stripe</option>
++ <option>Sola Payments</option>
+@@ ... @@
++ <?php if (isset($provider) && $provider == "Sola Payments") { ?>
++   <div class="form-group">
++     <label>Sola Payments API Key</label>
++     <input type="text" class="form-control" name="sola_api_key" value="<?php echo htmlspecialchars($sola_api_key ?? ''); ?>">
++   </div>
++   <div class="form-group">
++     <label>Sola Payments Secret</label>
++     <input type="text" class="form-control" name="sola_api_secret" value="<?php echo htmlspecialchars($sola_api_secret ?? ''); ?>">
++   </div>
++ <?php } ?>

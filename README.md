@@ -1,32 +1,22 @@
-# Sola Payments/Cardknox Plugin for ITFlow
-
-## Overview
-
-This repository contains a modular plugin for adding Sola Payments (Cardknox) card processing to ITFlow, including:
-
-- Customer and technician/admin payment forms
-- Admin settings (API keys, enable/disable, customer visibility)
-- Automated installer for easy integration into an ITFlow instance
+# Sola Payments Plugin for ITFlow
 
 ## Installation
 
-1. Clone this repo:
-    ```
-    git clone https://github.com/AssistitTech/itflow-sola-payments-plugin.git
-    cd itflow-sola-payments-plugin
-    ```
-2. Run the installer:
-    ```
-    bash install_plugin.sh
-    ```
-    - The script will ask for the path to your ITFlow installation.
-
-## Updating
-
-Rerun `install_plugin.sh` after pulling updates—core patches will be re-applied if needed.
+1. Clone or unzip this repo on your ITFlow server.
+2. Run:
+   ```bash
+   sudo bash install_plugin.sh
+   ```
+   and follow the prompts.
+3. Go to **Admin > Payment Providers** in ITFlow, select "Sola Payments," and enter your API credentials.
+4. Sola Payments will now be available for invoices and saved payment methods.
 
 ## Uninstall
 
-Delete the plugin directory from `ITFlow/plugins/sola_payments/` and revert any core changes if needed.
+1. Remove Sola Payments from the payment provider table if desired.
+2. Remove the `plugins/sola_payments` folder and any files you added/copied.
 
----
+## Troubleshooting
+
+- If you see patch errors, make sure you are using vanilla ITFlow files and have not modified them.
+- For support, contact AssistitTech.
