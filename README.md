@@ -1,22 +1,10 @@
-# Sola Payments Plugin for ITFlow
+# Sola Payments for ITFlow
 
-## Installation
+## Setup
 
-1. Clone or unzip this repo on your ITFlow server.
-2. Run:
-   ```bash
-   sudo bash install_plugin.sh
-   ```
-   and follow the prompts.
-3. Go to **Admin > Payment Providers** in ITFlow, select "Sola Payments," and enter your API credentials.
-4. Sola Payments will now be available for invoices and saved payment methods.
+- Run `sudo bash install_plugin.sh`
+- Enter your ITFlow path when prompted
+- Go to Admin > Payment Providers in ITFlow, select "Sola Payments," and enter your API Key and Secret
+- Test a payment as a guest or client
 
-## Uninstall
-
-1. Remove Sola Payments from the payment provider table if desired.
-2. Remove the `plugins/sola_payments` folder and any files you added/copied.
-
-## Troubleshooting
-
-- If you see patch errors, make sure you are using vanilla ITFlow files and have not modified them.
-- For support, contact AssistitTech.
+If you see a warning about missing API credentials, set them in the admin UI first.

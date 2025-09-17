@@ -1,17 +1,17 @@
 --- admin/post/payment_provider.php
 +++ admin/post/payment_provider.php
 @@ ... @@
--    if ($provider == "Stripe") {
--      $public_key = sanitizeInput($_POST['public_key']);
--      $private_key = sanitizeInput($_POST['private_key']);
--      // ... existing Stripe logic ...
--    }
-+    if ($provider == "Stripe") {
-+      $public_key = sanitizeInput($_POST['public_key']);
-+      $private_key = sanitizeInput($_POST['private_key']);
-+      // ... existing Stripe logic ...
-+    } elseif ($provider == "Sola Payments") {
-+      $public_key = sanitizeInput($_POST['sola_api_key']);
-+      $private_key = sanitizeInput($_POST['sola_api_secret']);
-+      // ...add any Sola Payments specific logic here...
-+    }
+-  if ($provider == "Stripe") {
+-    $public_key = sanitizeInput($_POST['public_key']);
+-    $private_key = sanitizeInput($_POST['private_key']);
+-    // ... Stripe code
+-  }
++  if ($provider == "Stripe") {
++    $public_key = sanitizeInput($_POST['public_key']);
++    $private_key = sanitizeInput($_POST['private_key']);
++    // ... Stripe code
++  } elseif ($provider == "Sola Payments") {
++    $public_key = sanitizeInput($_POST['sola_api_key']);
++    $private_key = sanitizeInput($_POST['sola_api_secret']);
++    // ... Sola code (everything else same as Stripe)
++  }
